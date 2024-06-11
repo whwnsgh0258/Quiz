@@ -134,6 +134,7 @@ fabric.properties
 
 google-java-format.xml
 misc.xml
-!/.idea/vcs.xml
-!/.idea/modules.xml
-!/Quiz.iml
+vcs.xml
+modules.xml
+Quiz.iml
+/.idea/
