@@ -20,7 +20,7 @@ public class Food extends Product {
 
         System.out.println("상품명: " + getName());
         System.out.println("가격: " + (int) foodPrice + "원");
-        System.out.println(getStock());
+        setStock();
         System.out.println("유통기한: " + this.expirationDate);
         return super.calculatePrice();
     }

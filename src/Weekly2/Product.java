@@ -46,12 +46,15 @@ public class Product {
         return price;
     }
 
-    public String getStock() {
+    public int getStock() {
+        return stock;
+    }
+    public void setStock() {
         if (stock < 1) {
             stock = 0;
-            return "재고가 없습니다.";
+            System.out.println("재고가 없습니다");
         } else {
-            return "재고: " + stock + "개";
+            System.out.println("재고: " + getStock() + "개");
         }
     }
 

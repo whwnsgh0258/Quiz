@@ -2,7 +2,7 @@ package Weekly2;
 
 import java.util.Scanner;
 
-public class ShoppingMall {
+public abstract class ShoppingMall {
     private Product[] productArray;
     private int productArraySize;
 
@@ -18,6 +18,17 @@ public class ShoppingMall {
             this.productArray = newProductArray;
         }this.productArray[this.productArraySize++] = product;
     }
+    public void removeProduct(String productName) {
+        for (int i = 0; i < productArraySize; i++) {
+            if (productArray[i].getName().equals(productName)) {
+                for (int j = i; j < productArraySize - 1; j++) {
+                    productArray[j] = productArray[j + 1];
+                }
+                productArray[--productArraySize] = null;  // 제품을 제거하고 제품 수 감소
+                return;
+            }
+        }
+    }
 
     public void displayProducts() {
         for (int i = 0; i < this.productArraySize; i++) {
@@ -27,4 +38,6 @@ public class ShoppingMall {
         System.out.println();
         System.out.println("\n장바구니에 " + productArraySize + "개의 상품이 있습니다.");
     }
+
+    public abstract boolean checkOrderAvailability(Product product);
 }
