@@ -9,20 +9,17 @@ public class Test {
 
         Cloth cloth = new Cloth("공대생 셔츠", 15000, 20);
         Electronics electronics1 = new Electronics("Mac", 1000000, 10);
-        Food food = new Food("바나나 한송이", 10000, 9, expirationDate);
+        Food food = new Food("바나나 한송이", 10000, 15, expirationDate);
 
 
-        ShoppingMall shoppingMall = new ShoppingMall(10) {
-            @Override
-            public boolean checkOrderAvailability(Product product) {
-                return false;
-            }
+
+        PremiumShoppingMall premiumShoppingMall = new PremiumShoppingMall(10) {
         };
 
-
-        shoppingMall.addProduct(cloth);
-        shoppingMall.addProduct(electronics1);
-        shoppingMall.addProduct(food);
-        shoppingMall.displayProducts();
+        premiumShoppingMall.addProduct(cloth);
+        premiumShoppingMall.addProduct(electronics1);
+        premiumShoppingMall.addProduct(food);
+        premiumShoppingMall.displayProducts();
+        System.out.println(premiumShoppingMall.checkOrderAvailability());
     }
 }

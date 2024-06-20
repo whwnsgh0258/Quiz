@@ -39,5 +39,10 @@ public abstract class ShoppingMall {
         System.out.println("\n장바구니에 " + productArraySize + "개의 상품이 있습니다.");
     }
 
-    public abstract boolean checkOrderAvailability(Product product);
+    public abstract boolean checkOrderAvailability();
+
+    public Product[] getProductArray() {
+        return productArray;
+    }
+
 }

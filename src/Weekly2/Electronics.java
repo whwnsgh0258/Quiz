@@ -28,11 +28,11 @@ public class Electronics extends Product {
             } else if (this.brand.equals("SamSung")) {
                 System.out.println("상품명: " + getName());
                 System.out.println("가격: " + (int) ePrice + "원");
-                System.out.println(getStock());
+                setStock();
                 System.out.println("브랜드: " + this.brand);
                 break;
             } else {
-                System.out.println("브랜드 명을 다시 입력해 주세요: ");
+                System.out.print("브랜드 명을 다시 입력해 주세요: ");
             }
         }
         return super.calculatePrice();

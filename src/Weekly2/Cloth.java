@@ -20,7 +20,7 @@ public class Cloth extends Product {
 
         while (true) {
             this.size = sc.nextLine();
-            if (this.size.equals("L")) {
+            if (this.size.equals("L") || this.size.equals("XL")) {
                 clothPrice = clothPrice * 1.1;
                 // 상세 정보 출력
                 System.out.println("상품명: " + getName());
@@ -28,7 +28,7 @@ public class Cloth extends Product {
                 setStock();
                 System.out.println("사이즈: " + this.size);
                 break;
-            } else if (this.size.equals("XS") || this.size.equals("S") || this.size.equals("M") || this.size.equals("XL")) {
+            } else if (this.size.equals("XS") || this.size.equals("S") || this.size.equals("M")) {
                 System.out.println("상품명: " + getName());
                 System.out.println("가격: " + (int) clothPrice + "원");
                 setStock();
