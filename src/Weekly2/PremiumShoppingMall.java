@@ -15,3 +15,4 @@ public class PremiumShoppingMall extends ShoppingMall {
         }return true;
     }
 }
+

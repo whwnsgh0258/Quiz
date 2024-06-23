@@ -9,7 +9,7 @@ public class Test {
 
         Cloth cloth = new Cloth("공대생 셔츠", 15000, 20);
         Electronics electronics1 = new Electronics("Mac", 1000000, 10);
-        Food food = new Food("바나나 한송이", 10000, 15, expirationDate);
+        Food food = new Food("바나나 한송이", 10000, 5, expirationDate);
 
 
 
