@@ -1,6 +1,6 @@
 package Weekly3;
 
-public class Book <T>{
+public class Book<T> {
     private String title; // 제목
     private String author; // 저자
     private T identifier; // 고유 식별자
@@ -21,5 +21,11 @@ public class Book <T>{
 
     public String getTitle() {
         return title;
+    }
+
+    // 이거 몰랐음
+    @Override
+    public String toString() {
+        return "제목 = " + title + ", 저자 = " + author + ", id =" + identifier;
     }
 }
