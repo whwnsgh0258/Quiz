@@ -5,7 +5,7 @@ public class Book<T> {
     private String author; // 저자
     private T identifier; // 고유 식별자
 
-    public Book(String author, T identifier, String title) {
+    public Book( String title, String author, T identifier) {
         this.author = author;
         this.identifier = identifier;
         this.title = title;
@@ -26,6 +26,6 @@ public class Book<T> {
     // 이거 몰랐음
     @Override
     public String toString() {
-        return "제목 = " + title + ", 저자 = " + author + ", id =" + identifier;
+        return "제목 = " + title + ", 저자 = " + author + ", id = " + identifier;
     }
 }
